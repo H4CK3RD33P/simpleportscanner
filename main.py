@@ -4,6 +4,12 @@ import socket
 import sys
 import datetime
 import termcolor
+import pyfiglet
+ 
+#WELCOME BANNER
+
+print(pyfiglet.figlet_format("Simple\nPort\nScanner",font='bulbhead'))
+print(pyfiglet.figlet_format("By Subhodeep Sarkar",font='bubble'))
 
 #GETTING THE IP
 
