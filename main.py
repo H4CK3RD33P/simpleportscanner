@@ -42,5 +42,5 @@ except KeyboardInterrupt:
 	sys.exit()
 except socket.gaierror:
 	print(termcolor.colored("unable to establish connection",color='red',attrs=['reverse','blink']))
-print(termcolor.colored("-"*50,color='red',attrs=['red']))
+print(termcolor.colored("-"*50,color='red',attrs=['blink']))
 print(termcolor.colored("Finished At: {}".format(datetime.datetime.now()),color='green',attrs=['underline','bold']))
