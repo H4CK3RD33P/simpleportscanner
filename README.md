@@ -1,4 +1,4 @@
-# **simpleportscanner**
+# **Simple Port Scanner**
 ## *By Subhodeep Sarkar*
 *A simple port scanner with minimalist VFX!*
 
