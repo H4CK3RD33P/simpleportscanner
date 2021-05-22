@@ -16,3 +16,24 @@ else:
 	print("IP or address is a must :( ")
 	sys.exit()
 
+#OPEN PORT DETECTION
+
+print(">>"*50)
+print("Scanning target: {}".format(target_ip))
+print("Started At: {}".format(datetime.datetime.now()))
+print("<<"*50)
+try:
+	for port in range(1,1024):
+		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+		socket.setdefaulttimeout(1)
+		result = s.connect_ex((target_ip,port))
+		if (result == 0):
+			print("Port {} is open".format(port))
+		s.close()
+except KeyboardInterrupt:
+	print("Closing the scanner")
+	sys.exit()
+except socket.gaierror:
+	print("unable to establish connection")
+print("-"*50)
+print("Scanning finished at {}".format(datetime.datetime.now()))
